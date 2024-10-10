@@ -30,13 +30,10 @@ public class FamousQuotes {
                   if(index == 0){
                       int randomIndex = random.nextInt(quotes.length);
                       System.out.println(quotes[randomIndex]);
-                  } else {
-                      if (index >= 1 && index <= 10){
-                          System.out.println(quotes[index - 1]);
-                      } else {
-                          System.out.println("Invalid input range, please select from #1 - #10 ");
+                  } else if (index >= 0 && index <= 10) {System.out.println(quotes[index - 1]);
+                      } else {System.out.println("Invalid input range, please select from #1 - #10 ");
                       }
-                  }
+
 
               } catch (Exception e) {
                   System.out.println("This is invalid prompt, please try again.");
